@@ -1,0 +1,218 @@
+﻿<views:MvxWindowsPage
+    x:Class="Snake.GameView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Snake"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="using:Cirrious.MvvmCross.WindowsCommon.Views"
+    xmlns:controls="using:Snake.Controls"
+    mc:Ignorable="d"
+    Background="{StaticResource SnakeGreen}">
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+           
+            <!-- Navigation -->
+            <!-- Left -->
+            <Button
+                Style="{StaticResource EmptyButtonStyle}"
+                Grid.RowSpan="3"
+                Background="Transparent"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                Command="{Binding LeftTouchCommand}">
+                <Image
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Stretch="None"
+                    Source="ms-appx:///Assets/wp_arrow_left-53.png"/>
+            </Button>
+            
+            <!-- Right -->
+            <Button
+                Style="{StaticResource EmptyButtonStyle}"
+                Grid.Column="2"
+                Grid.RowSpan="3"
+                Background="Transparent"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                Command="{Binding RightTouchCommand}">
+                <Image
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Stretch="None"
+                    Source="ms-appx:///Assets/wp_arrow_right-51.png"/>
+            </Button>
+            
+            <!-- Top -->
+            <Button
+                Style="{StaticResource EmptyButtonStyle}"
+                Grid.ColumnSpan="3"
+                Background="Transparent"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                Command="{Binding TopTouchCommand}">
+                <Image
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Stretch="None"
+                    Source="ms-appx:///Assets/wp_arrow_top.png"/>
+            </Button>
+            
+            <!-- Bottom -->
+            <Button
+                Style="{StaticResource EmptyButtonStyle}"
+                Grid.Row="2"
+                Grid.ColumnSpan="3"
+                Background="Transparent"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                Command="{Binding BottomTouchCommand}">
+                <Image
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Stretch="None"
+                    Source="ms-appx:///Assets/wp_arrow_bottom-52.png"/>
+            </Button>
+            
+            <!-- Pause -->
+            <Button
+                Name="PauseButton"
+                Style="{StaticResource EmptyButtonStyle}"
+                Grid.Column="2"
+                Command="{Binding PauseCommand}"
+                SizeChanged="PauseButtonSizeChanged">
+                <Image
+                    Source="ms-appx:///Assets/wp_pause-48.png"
+                    Stretch="None"/>
+            </Button>
+            <Button
+                Opacity="0"
+                Style="{StaticResource EmptyButtonStyle}"
+                Grid.Column="0"
+                Grid.Row="2">
+                <Image
+                    Source="ms-appx:///Assets/wp_pause-48.png"
+                    Stretch="None"/>
+            </Button>
+            
+            <!-- Score Label -->
+            <StackPanel
+                Grid.Row="2"
+                Grid.Column="1"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+                <TextBlock
+                    Style="{StaticResource BlackMonoTextBlockStyle}"
+                    Margin="0,0,3,0"
+                    Text="SCORE:"/>
+                <TextBlock
+                    Style="{StaticResource BlackMonoTextBlockStyle}"
+                    Text="{Binding Points,
+                    Converter={StaticResource IntegerToString}}"/>
+            </StackPanel>
+            
+            <!-- Level label -->
+            <StackPanel
+                Grid.Row="2"
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+                <TextBlock
+                    Style="{StaticResource BlackMonoTextBlockStyle}"
+                    Margin="0,0,3,0"
+                    Text="LEVEL:"/>
+                <TextBlock
+                    Style="{StaticResource BlackMonoTextBlockStyle}"
+                    Text="{Binding Level}"/>
+            </StackPanel>
+            
+            <!-- Game -->
+            <Grid
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Grid.Column="1"
+                Grid.Row="1">
+                <Border
+                    BorderBrush="Black"
+                    BorderThickness="4">
+                    <controls:CanvasControl
+                        x:Name="CanvasControl"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        ChildrenList="{Binding Shapes}"/>
+                </Border>  
+                <Button
+                    Style="{StaticResource EmptyButtonStyle}"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Stretch"
+                    Height="100"
+                    Command="{Binding TopTouchCommand}"/>
+                <Button
+                    Style="{StaticResource EmptyButtonStyle}"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Stretch"
+                    Height="100"
+                    Command="{Binding BottomTouchCommand}"/>
+                <Button
+                    Style="{StaticResource EmptyButtonStyle}"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Left"
+                    Width="100"
+                    Command="{Binding LeftTouchCommand}"/>
+                <Button
+                    Style="{StaticResource EmptyButtonStyle}"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Right"
+                    Width="100"
+                    Command="{Binding RightTouchCommand}"/>
+            </Grid>
+        </Grid>
+        
+        <!-- Finish Popup -->
+        <Grid
+            Visibility="{Binding FinishDialogHidden,
+            Converter={StaticResource BooleanToHide}}"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <Image
+                Source="ms-appx:///Assets/wp_popup-46.png"
+                Stretch="None"/>
+            <Button
+                Style="{StaticResource EmptyButtonStyle}"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Command="{Binding CloseCommand}">
+                <Image
+                    Source="ms-appx:///Assets/wp_close_popup-47.png"
+                    Stretch="None"/>
+            </Button>
+            <StackPanel
+                Orientation="Vertical"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <Button
+                    Style="{StaticResource GreenButtonStyle}"
+                    Content="RESTART"
+                    Command="{Binding RestartCommand}"/>
+                <Button
+                    Style="{StaticResource GreenButtonStyle}"
+                    Content="QUIT"
+                    Command="{Binding QuitCommand}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</views:MvxWindowsPage>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:local="http://schemas.android.com/apk/res-auto"
+                xmlns:font="http://schemas.android.com/apk/res/Snake.Android"
+                style="@style/StretchedView"
+                android:background="@color/Green">
+
+  <RelativeLayout
+      android:id="@+id/StartGameContent"
+      style="@style/StretchedView">
+
+    <ImageView
+         android:id="@+id/LeftArrow"
+         style="@style/StretchedVerticallyView"         
+         android:src="@drawable/design_arrow_left"
+         android:padding="@dimen/GameButtonPadding"
+         android:layout_gravity="left|center_vertical"
+         android:layout_alignParentLeft="true"/>
+
+    <ImageView
+      android:id="@+id/RightArrow"
+      style="@style/StretchedVerticallyView"      
+      android:src="@drawable/design_arrow_right"
+      android:padding="@dimen/GameButtonPadding"
+      android:layout_gravity="right|center_vertical"
+      android:layout_alignParentRight="true"/>    
+    
+    <RelativeLayout
+      style="@style/WrappedView"           
+      android:layout_toLeftOf="@id/RightArrow"
+      android:layout_toRightOf="@id/LeftArrow">
+
+      <RelativeLayout
+        android:id="@+id/TopContent"
+        style="@style/StretchedHorizontallyView"
+        android:layout_alignParentTop="true">
+        <ImageView
+          style="@style/StretchedHorizontallyView"
+          android:src="@drawable/design_arrow_up"          
+          android:padding="@dimen/GameButtonPadding"
+          android:layout_centerHorizontal="true"          
+          android:layout_gravity="center"/>
+      </RelativeLayout>
+
+      <RelativeLayout
+        android:id="@+id/BottomContent"
+        style="@style/StretchedHorizontallyView"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+          style="@style/StretchedHorizontallyView"
+          android:layout_gravity="left|center"
+          android:gravity="center"          
+          android:layout_alignParentLeft="true"
+          android:layout_centerVertical="true"
+          android:orientation="horizontal">
+          <snake.android.widgets.TypeFaceTextView
+            style="@style/GameInfoStyle"
+            font:fontPath="Fonts/VCR_OSD_MONO.ttf"
+            android:text="@string/Score"/>
+          <snake.android.widgets.TypeFaceTextView
+            style="@style/GameInfoStyle"
+            font:fontPath="Fonts/VCR_OSD_MONO.ttf"
+            local:MvxBind="Text Points"/>
+
+          <LinearLayout
+            style="@style/StretchedHorizontallyView"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:gravity="right"            
+            android:orientation="horizontal">
+            <snake.android.widgets.TypeFaceTextView
+              style="@style/GameInfoStyle"
+              font:fontPath="Fonts/nokiafc22.ttf"
+              android:text="@string/Level"/>
+            <snake.android.widgets.TypeFaceTextView
+              style="@style/GameInfoStyle"
+              font:fontPath="Fonts/VCR_OSD_MONO.ttf"
+              local:MvxBind="Text Level"/>
+          </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+          style="@style/StretchedHorizontallyView"
+          android:src="@drawable/design_arrow_down"
+          android:layout_centerHorizontal="true"          
+          android:padding="@dimen/GameButtonPadding"
+          android:layout_gravity="center"/>
+      </RelativeLayout>
+
+      <snake.android.widgets.GameView
+        android:id="@+id/GamePanel"
+        style="@style/StretchedView"
+        android:background="@drawable/ShapeGameView"
+        android:layout_above="@id/BottomContent"
+        android:layout_below="@id/TopContent"
+        android:layout_gravity="center"
+        local:MvxBind="Shapes Shapes,Converter=GameViewBinding"/>
+    </RelativeLayout>
+    
+  </RelativeLayout>
+
+  <LinearLayout
+    style="@style/StretchedView"    
+    android:orientation="horizontal"
+    android:weightSum="0.8">
+
+    <FrameLayout
+      style="@style/NoWidthStretchedVerticallyView"
+      android:layout_weight="0.2"
+      local:MvxBind="Click LeftTouchCommand"/>
+
+    <LinearLayout
+     style="@style/NoWidthStretchedVerticallyView"
+     android:layout_weight="0.4"
+     android:orientation="vertical">
+
+      <FrameLayout
+        style="@style/NoHeightStretchedHorizontallyView"
+        android:layout_weight="0.4"
+        local:MvxBind="Click TopTouchCommand"/>
+
+      <FrameLayout
+        style="@style/NoHeightStretchedHorizontallyView"
+        android:layout_weight="0.4"
+        local:MvxBind="Click BottomTouchCommand"/>
+     
+    </LinearLayout>
+
+    <FrameLayout
+      style="@style/NoWidthStretchedVerticallyView"
+      android:layout_weight="0.2"
+      local:MvxBind="Click RightTouchCommand"/>
+
+  </LinearLayout>
+
+  <ImageButton
+    style="@style/WrappedView"
+    android:src="@drawable/design_pause"
+    android:layout_alignParentRight="true"
+    android:background="@null"
+    android:layout_gravity="right"
+    local:MvxBind="Click PauseCommand"/>
+  
+  <FrameLayout
+    style="@style/WrappedView"
+    android:background="@color/Green"
+    android:layout_gravity="center"
+    android:layout_centerInParent="true"
+    local:MvxBind="Visibility BooleanToHide(FinishDialogHidden)">
+
+    <ImageView
+      style="@style/WrappedView"
+      android:background="@color/Black"
+      android:src="@drawable/design_popup"/>
+
+    <ImageButton
+      style="@style/WrappedView"
+      android:src="@drawable/design_close_popup"
+      android:background="@null"
+      android:layout_alignParentRight="true"
+      android:layout_gravity="right"
+      local:MvxBind="Click CloseCommand"/>
+
+    <LinearLayout
+      style="@style/StretchedView"
+      android:orientation="vertical"
+      android:layout_gravity="center"
+      android:layout_centerInParent="true">
+      
+      <snake.android.widgets.TypeFaceTextView
+          style="@style/StartGamePopUpItem"
+          android:text="@string/Restart"
+          font:fontPath="Fonts/VCR_OSD_MONO.ttf"
+          local:MvxBind="Click RestartCommand"/>
+
+
+      <snake.android.widgets.TypeFaceTextView
+          style="@style/StartGamePopUpItem"
+          android:text="@string/Quit"
+          font:fontPath="Fonts/VCR_OSD_MONO.ttf"
+          local:MvxBind="Click QuitCommand"/>
+
+    </LinearLayout>
+
+  </FrameLayout>
+
+</RelativeLayout>

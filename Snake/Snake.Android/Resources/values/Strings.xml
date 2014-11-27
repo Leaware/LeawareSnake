@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>  
+    <string name="ApplicationName">Snake.Android</string>
+  
+  <!-- Start Screen -->
+  <string name="HighScores">* HIGH SCORES *</string>
+  <string name="easy">easy:</string>
+  <string name="medium">medium:</string>
+  <string name="high">high:</string>
+  <string name="NewGame">NEW GAME</string>
+  <string name="Easy">EASY</string>
+  <string name="Medium">MEDIUM</string>
+  <string name="Hard">HARD</string>
+  
+  <!-- Game Screen -->
+  <string name="Restart">RESTART</string>
+  <string name="Quit">QUIT</string>
+  <string name="Score">SCORE: </string>
+  <string name="Level">LEVEL: </string>
+</resources>

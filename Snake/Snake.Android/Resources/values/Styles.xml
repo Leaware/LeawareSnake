@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <style name="StretchedView">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+  </style>
+
+  <style name="StretchedHorizontallyView">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="StretchedVerticallyView">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">match_parent</item>
+  </style>
+
+  <style name="WrappedView">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+  </style>
+
+  <style name="NoWidthWrappedView" parent="WrappedView">
+    <item name="android:layout_width">0dp</item>
+  </style>
+
+  <style name="NoHeightWrappedView" parent="WrappedView">
+    <item name="android:layout_height">0dp</item>
+  </style>
+
+  <style name="NoHeightStretchedHorizontallyView" parent="StretchedHorizontallyView">
+    <item name="android:layout_height">0dp</item>
+  </style>
+
+  <style name="NoWidthStretchedVerticallyView" parent="StretchedVerticallyView">
+    <item name="android:layout_width">0dp</item>
+  </style>
+
+  <style name="NoWidthStretchedHorizontallyView" parent="StretchedHorizontallyView">
+    <item name="android:layout_width">0dp</item>
+  </style>
+  
+  <!-- Start Screen -->
+  <style name="PointsView" parent="NoWidthStretchedVerticallyView">
+    <item name="android:textColor">@color/Black</item>
+    <item name="android:textSize">@dimen/Text40</item>    
+    <item name="android:layout_weight">1.0</item>
+    <item name="android:gravity">center|top</item>
+  </style>
+
+  <style name="PointsLabelView" parent="PointsView">
+    <item name="android:gravity">center|bottom</item>
+  </style>
+
+  <style name="StartGamePopUpItem" parent="NoHeightStretchedHorizontallyView">
+    <item name="android:textColor">@color/Green</item>
+    <item name="android:textSize">@dimen/Text40</item>
+    <item name="android:layout_weight">1.0</item>
+    <item name="android:gravity">center</item>
+    <item name="android:paddingTop">@dimen/PopUpTextPadding</item>
+    <item name="android:paddingBottom">@dimen/PopUpTextPadding</item>
+  </style>
+  
+  <!-- Game Screen -->
+  <style name="GameInfoStyle" parent="StretchedVerticallyView">
+    <item name="android:textColor">@color/Black</item>
+    <item name="android:textSize">@dimen/Text38</item>    
+    <item name="android:layout_gravity">center</item>
+    <item name="android:gravity">center</item>
+    <item name="android:layout_marginRight">@dimen/GameInfoMargin</item>
+  </style>
+  
+</resources>

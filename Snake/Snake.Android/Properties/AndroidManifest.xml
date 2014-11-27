@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Snake.Android" android:versionCode="1" android:versionName="1.0">
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="14" />
+	<application android:label="Snake" android:icon="@drawable/Icon" android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:hardwareAccelerated="true">
+		<activity android:name="snake.android.SplashActivity" android:noHistory="true" android:screenOrientation="portrait" android:configChanges="orientation|screenSize|keyboardHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="snake.android.GameActivity" android:screenOrientation="landscape" />
+		<activity android:name="snake.android.StartActivity" android:screenOrientation="landscape" />
+	</application>
+</manifest>

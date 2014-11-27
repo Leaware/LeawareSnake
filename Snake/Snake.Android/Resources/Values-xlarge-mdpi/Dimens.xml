@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <dimen name="Text6">13sp</dimen>
+  <dimen name="Text66">13pt</dimen>
+  <dimen name="Text18">16sp</dimen>
+  <dimen name="Text20">17sp</dimen>
+  <dimen name="Text21">17.5sp</dimen>
+  <dimen name="Text22">18sp</dimen>
+  <dimen name="Text23">18.5sp</dimen>
+  <dimen name="Text24">19sp</dimen>
+  <dimen name="Text25">19.5sp</dimen>
+  <dimen name="Text26">20sp</dimen>
+  <dimen name="Text27">23sp</dimen>
+  <dimen name="Text28">21sp</dimen>
+  <dimen name="Text29">21.5sp</dimen>
+  <dimen name="Text30">25sp</dimen>
+  <dimen name="Text31">25.5sp</dimen>
+  <dimen name="Text32">30sp</dimen>
+  <dimen name="Text34">40sp</dimen>
+  <dimen name="Text36">42sp</dimen>
+  <dimen name="Text38">26sp</dimen>
+  <dimen name="Text40">50sp</dimen>
+  <dimen name="Text44">60sp</dimen>
+  <dimen name="Text46">70sp</dimen>
+  <dimen name="Text48">31sp</dimen>
+  <dimen name="Text50">32sp</dimen>
+  <dimen name="Text54">34sp</dimen>
+  <dimen name="Text58">36sp</dimen>
+  <dimen name="Text70">400sp</dimen>
+
+  <!--Start Screen-->
+  <dimen name="NewGameButtonHorizontalPadding">30dp</dimen>
+  <dimen name="NewGameButtonVerticalPadding">15dp</dimen>
+  <dimen name="PopUpTextPadding">20dp</dimen>
+
+  <!--GameScreen-->
+  <dimen name="GameButtonPadding">25dp</dimen>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <dimen name="Text6">11sp</dimen>
+  <dimen name="Text66">11pt</dimen>
+  <dimen name="Text18">14sp</dimen>
+  <dimen name="Text20">15sp</dimen>
+  <dimen name="Text21">15.5sp</dimen>
+  <dimen name="Text22">16sp</dimen>
+  <dimen name="Text23">16.5sp</dimen>
+  <dimen name="Text24">17sp</dimen>
+  <dimen name="Text25">17.5sp</dimen>
+  <dimen name="Text26">18sp</dimen>
+  <dimen name="Text27">18.5sp</dimen>
+  <dimen name="Text28">19sp</dimen>
+  <dimen name="Text29">19.5sp</dimen>
+  <dimen name="Text30">20sp</dimen>
+  <dimen name="Text31">20.5sp</dimen>
+  <dimen name="Text32">21sp</dimen>
+  <dimen name="Text34">22sp</dimen>
+  <dimen name="Text36">23sp</dimen>
+  <dimen name="Text38">24sp</dimen>
+  <dimen name="Text40">25sp</dimen>
+  <dimen name="Text44">27sp</dimen>
+  <dimen name="Text46">28sp</dimen>
+  <dimen name="Text48">29sp</dimen>
+  <dimen name="Text50">30sp</dimen>
+  <dimen name="Text54">32sp</dimen>
+  <dimen name="Text58">34sp</dimen>
+  <dimen name="Text70">200sp</dimen>
+</resources>

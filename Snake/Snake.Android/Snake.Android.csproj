@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EFD8274A-8DD8-44D7-A8F5-479CC75A43F1}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Snake.Android</RootNamespace>
+    <AssemblyName>Snake.Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <DevInstrumentationEnabled>False</DevInstrumentationEnabled>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkSkip>
+    </AndroidLinkSkip>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions>
+    </AndroidStoreUncompressedFileExtensions>
+    <MandroidI18n>
+    </MandroidI18n>
+    <JavaMaximumHeapSize>
+    </JavaMaximumHeapSize>
+    <JavaOptions>
+    </JavaOptions>
+    <MonoDroidExtraArgs>
+    </MonoDroidExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkSkip>
+    </AndroidLinkSkip>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions>
+    </AndroidStoreUncompressedFileExtensions>
+    <MandroidI18n>
+    </MandroidI18n>
+    <JavaMaximumHeapSize>
+    </JavaMaximumHeapSize>
+    <JavaOptions>
+    </JavaOptions>
+    <MonoDroidExtraArgs>
+    </MonoDroidExtraArgs>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.2\lib\MonoAndroid\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.2\lib\MonoAndroid\Cirrious.CrossCore.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.2\lib\MonoAndroid\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.2\lib\MonoAndroid\Cirrious.MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.2\lib\MonoAndroid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.2\lib\MonoAndroid\Cirrious.MvvmCross.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.2\lib\MonoAndroid\Cirrious.MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Sqlite">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Sqlite.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Sqlite.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Sqlite.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Sqlite.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmCross.PortableSupport.3.2.2\lib\MonoAndroid\System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmCross.PortableSupport.3.2.2\lib\MonoAndroid\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MvvmCross.PortableSupport.3.2.2\lib\MonoAndroid\System.Xml.Serialization.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity\GameActivity.cs" />
+    <Compile Include="Activity\SplashActivity.cs" />
+    <Compile Include="Bootstrap\SqlitePluginBootstrap.cs" />
+    <Compile Include="Converters\BooleanToHideConverter.cs" />
+    <Compile Include="Converters\GameViewBiding.cs" />
+    <Compile Include="DebugTrace.cs" />
+    <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="Activity\StartActivity.cs" />
+    <Compile Include="Utils\AndroidChartPlotter.cs" />
+    <Compile Include="Utils\Timer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\TypeFaceProvider.cs" />
+    <Compile Include="Widgets\GameView.cs" />
+    <Compile Include="Widgets\TypefaceButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Widgets\TypefaceTextView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Fonts\VCR_OSD_MONO.ttf" />
+    <AndroidAsset Include="Assets\Fonts\nokiafc22.ttf" />
+    <None Include="packages.config" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\design_arrow_down.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\design_close_popup.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\Layout\Layout_StartActivity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Layout_GameActivity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Layout_SplashActivity.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Values\Dimens.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Drawable\ShapeGameView.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <AndroidResource Include="Resources\Values\MvxBindingAttributes.xml" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\design_arrow_left.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\design_arrow_right.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\design_arrow_up.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\design_dot.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\design_game_board_border.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\design_new_game.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\design_pause.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\design_popup.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\design_snake_dot.png" />
+    <AndroidResource Include="Resources\Drawable-xxhdpi\design_splash.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\design_arrow_down.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\design_arrow_left.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\design_arrow_right.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\design_arrow_up.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\design_close_popup.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\design_dot.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\design_game_board_border.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\design_new_game.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\design_pause.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\design_popup.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\design_snake_dot.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\design_splash.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\design_arrow_down.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\design_arrow_left.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\design_arrow_right.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\design_arrow_up.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\design_close_popup.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\design_dot.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\design_game_board_border.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\design_new_game.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\design_pause.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\design_popup.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\design_snake_dot.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\design_splash.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\design_arrow_down.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\design_arrow_left.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\design_arrow_right.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\design_arrow_up.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\design_close_popup.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\design_dot.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\design_game_board_border.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\design_new_game.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\design_pause.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\design_popup.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\design_snake_dot.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\design_splash.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\Drawable-large-hdpi\design_arrow_down.png" />
+    <AndroidResource Include="Resources\Drawable-large-hdpi\design_arrow_left.png" />
+    <AndroidResource Include="Resources\Drawable-large-hdpi\design_arrow_right.png" />
+    <AndroidResource Include="Resources\Drawable-large-hdpi\design_arrow_up.png" />
+    <AndroidResource Include="Resources\Drawable-large-hdpi\design_close_popup.png" />
+    <AndroidResource Include="Resources\Drawable-large-hdpi\design_dot.png" />
+    <AndroidResource Include="Resources\Drawable-large-hdpi\design_game_board_border.png" />
+    <AndroidResource Include="Resources\Drawable-large-hdpi\design_new_game.png" />
+    <AndroidResource Include="Resources\Drawable-large-hdpi\design_pause.png" />
+    <AndroidResource Include="Resources\Drawable-large-hdpi\design_popup.png" />
+    <AndroidResource Include="Resources\Drawable-large-hdpi\design_snake_dot.png" />
+    <AndroidResource Include="Resources\Drawable-large-hdpi\design_splash.png" />
+    <AndroidResource Include="Resources\Drawable-large-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\Drawable-xlarge-mdpi\design_arrow_down.png" />
+    <AndroidResource Include="Resources\Drawable-xlarge-mdpi\design_arrow_left.png" />
+    <AndroidResource Include="Resources\Drawable-xlarge-mdpi\design_arrow_right.png" />
+    <AndroidResource Include="Resources\Drawable-xlarge-mdpi\design_arrow_up.png" />
+    <AndroidResource Include="Resources\Drawable-xlarge-mdpi\design_close_popup.png" />
+    <AndroidResource Include="Resources\Drawable-xlarge-mdpi\design_dot.png" />
+    <AndroidResource Include="Resources\Drawable-xlarge-mdpi\design_game_board_border.png" />
+    <AndroidResource Include="Resources\Drawable-xlarge-mdpi\design_new_game.png" />
+    <AndroidResource Include="Resources\Drawable-xlarge-mdpi\design_pause.png" />
+    <AndroidResource Include="Resources\Drawable-xlarge-mdpi\design_popup.png" />
+    <AndroidResource Include="Resources\Drawable-xlarge-mdpi\design_snake_dot.png" />
+    <AndroidResource Include="Resources\Drawable-xlarge-mdpi\design_splash.png" />
+    <AndroidResource Include="Resources\Drawable-xlarge-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\Values\Styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Anim\activity_in.xml" />
+    <AndroidResource Include="Resources\Anim\activity_out.xml" />
+    <AndroidResource Include="Resources\Anim\activity_in_back.xml" />
+    <AndroidResource Include="Resources\Anim\activity_out_back.xml" />
+    <AndroidResource Include="Resources\Values\Attribute.xml" />
+    <AndroidResource Include="Resources\Values\Colors.xml" />
+    <AndroidResource Include="Resources\Values-hdpi\Dimens.xml" />
+    <AndroidResource Include="Resources\Values-large-hdpi\Dimens.xml" />
+    <AndroidResource Include="Resources\Values-xhdpi\Dimens.xml" />
+    <AndroidResource Include="Resources\Values-xlarge-mdpi\Dimens.xml" />
+    <AndroidResource Include="Resources\Values-xxhdpi\Dimens.xml" />
+    <AndroidResource Include="Resources\Values-large-mdpi\Dimens.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Snake.Core\Snake.Core.csproj">
+      <Project>{939040e2-1052-4157-8190-86afde6ae6cb}</Project>
+      <Name>Snake.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

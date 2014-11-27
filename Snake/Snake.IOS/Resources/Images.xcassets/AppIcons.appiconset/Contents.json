@@ -1,0 +1,129 @@
+{
+	"images": [
+	  {
+		"filename" : "WP-20029x29.png",
+		"size" : "29x29",
+		"idiom" : "iphone",
+		"scale" : "1x"
+	  },
+	  {
+		"filename" : "WP-20058x58.png",
+		"size" : "29x29",
+		"idiom" : "iphone",
+		"scale" : "2x"
+	  },
+	  {
+		"filename" : "WP-20087x87.png",
+		"size" : "29x29",
+		"idiom" : "iphone",
+		"scale" : "3x"
+	  },
+	  {
+		"filename" : "WP-20080x80.png",
+		"size" : "40x40",
+		"idiom" : "iphone",
+		"scale" : "2x"
+	  },
+	  {
+		"filename" : "WP-200120x120.png",
+		"size" : "40x40",
+		"idiom" : "iphone",
+		"scale" : "3x"
+	  },
+	  {
+		"filename" : "WP-20057x57.png",
+		"size" : "57x57",
+		"idiom" : "iphone",
+		"scale" : "1x"
+	  },
+	  {
+		"filename" : "WP-200114x114.png",
+		"size" : "57x57",
+		"idiom" : "iphone",
+		"scale" : "2x"
+	  },
+	  {
+		"filename" : "WP-200120x120.png",
+		"size" : "60x60",
+		"idiom" : "iphone",
+		"scale" : "2x"
+	  },
+	  {
+		"filename" : "WP-200180x180.png",
+		"size" : "60x60",
+		"idiom" : "iphone",
+		"scale" : "3x"
+	  },
+	  {
+		"filename" : "WP-20029x29.png",
+		"size" : "29x29",
+		"idiom" : "ipad",
+		"scale" : "1x"
+	  },
+	  {
+		"filename" : "WP-20058x58.png",
+		"size" : "29x29",
+		"idiom" : "ipad",
+		"scale" : "2x"
+	  },
+	  {
+		"filename" : "WP-20040x40.png",
+		"size" : "40x40",
+		"idiom" : "ipad",
+		"scale" : "1x"
+	  },
+	  {
+		"filename" : "WP-20080x80.png",
+		"size" : "40x40",
+		"idiom" : "ipad",
+		"scale" : "2x"
+	  },
+	  {
+		"filename" : "WP-20050x50.png",
+		"size" : "50x50",
+		"idiom" : "ipad",
+		"scale" : "1x"
+	  },
+	  {
+		"filename" : "WP-200100x100.png",
+		"size" : "50x50",
+		"idiom" : "ipad",
+		"scale" : "2x"
+	  },
+	  {
+		"filename" : "WP-20072x72.png",
+		"size" : "72x72",
+		"idiom" : "ipad",
+		"scale" : "1x"
+	  },
+	  {
+		"filename" : "WP-200144x144.png",
+		"size" : "72x72",
+		"idiom" : "ipad",
+		"scale" : "2x"
+	  },
+	  {
+		"filename" : "WP-20076x76.png",
+		"size" : "76x76",
+		"idiom" : "ipad",
+		"scale" : "1x"
+	  },
+	  {
+		"filename" : "WP-200152x152.png",
+		"size" : "76x76",
+		"idiom" : "ipad",
+		"scale" : "2x"
+	  },
+	  {
+		"filename" : "WP-200120x120.png",
+		"size" : "120x120",
+		"idiom" : "car",
+		"scale" : "1x"
+	  }
+	],
+	"info":
+	   {
+		"version" : 1,
+		"author" : "xcode"
+	   }
+}

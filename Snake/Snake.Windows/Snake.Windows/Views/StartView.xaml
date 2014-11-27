@@ -1,0 +1,134 @@
+﻿<views:MvxWindowsPage
+    x:Class="Snake.StartView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Snake"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="using:Cirrious.MvvmCross.WindowsCommon.Views"
+    mc:Ignorable="d">
+
+    <Grid
+        Background="{StaticResource SnakeGreen}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions> 
+        
+            <TextBlock
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Style="{StaticResource BlackTextBlockStyle}"
+                FontSize="80"
+                Text="* HIGH SCORES *"/>
+          
+            <StackPanel
+                Orientation="Vertical"
+                Grid.Row="1"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center">
+                <TextBlock
+                    Style="{StaticResource BlackTextBlockStyle}"
+                    FontSize="70"
+                    Text="easy:"/>
+                <TextBlock
+                    Style="{StaticResource BlackTextBlockStyle}"
+                    FontSize="70"
+                    Text="{Binding EasyMaxScore}"/>
+            </StackPanel>
+        
+            <StackPanel
+                Orientation="Vertical"
+                Grid.Row="1"
+                Grid.Column="1"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center">
+                <TextBlock
+                    Style="{StaticResource BlackTextBlockStyle}"
+                    FontSize="70"  
+                    Text="medium:"/>
+                <TextBlock
+                    Style="{StaticResource BlackTextBlockStyle}"
+                    FontSize="70"
+                    Text="{Binding MediumMaxScore}"/>
+            </StackPanel>
+        
+            <StackPanel
+                Orientation="Vertical"
+                Grid.Row="1"
+                Grid.Column="2"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center">
+                <TextBlock
+                    Style="{StaticResource BlackTextBlockStyle}"
+                    FontSize="70"
+                    Text="high:"/>
+                <TextBlock
+                    Style="{StaticResource BlackTextBlockStyle}"
+                    FontSize="70"
+                    Text="{Binding HardMaxScore}"/>
+            </StackPanel>
+        
+            <!-- New Game Button-->
+            <Button
+                Style="{StaticResource EmptyButtonStyle}"
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Command="{Binding StartTouchCommand}">
+                <Image
+                    Source="ms-appx:///Assets/wp_new_game-45.png"
+                    Stretch="None"/>
+            </Button>
+        </Grid>
+        
+        <!-- Selection Level Popup -->
+        <Grid
+            Visibility="{Binding SelectLevelHidden,
+            Converter={StaticResource BooleanToHide}}"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <Image
+                Source="ms-appx:///Assets/wp_popup-46.png"
+                Stretch="None"/>
+            <Button
+                Style="{StaticResource EmptyButtonStyle}"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Command="{Binding CloseCommand}">
+                <Image
+                    Source="ms-appx:///Assets/wp_close_popup-47.png"
+                    Stretch="None"/>
+            </Button>
+            <StackPanel
+                Orientation="Vertical"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <Button
+                    Style="{StaticResource GreenButtonStyle}"
+                    FontSize="85"
+                    Content="EASY"
+                    Command="{Binding EasyChoicedCommand}"/>
+                <Button
+                    Style="{StaticResource GreenButtonStyle}"
+                    FontSize="85"
+                    Content="MEDIUM"
+                    Command="{Binding MediumChoicedCommand}"/>
+                <Button
+                    Style="{StaticResource GreenButtonStyle}"
+                    FontSize="85"
+                    Content="HARD"
+                    Command="{Binding HardChoicedCommand}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</views:MvxWindowsPage>

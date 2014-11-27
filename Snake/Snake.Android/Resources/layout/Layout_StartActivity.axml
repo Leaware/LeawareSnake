@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:local="http://schemas.android.com/apk/res-auto"
+                xmlns:font="http://schemas.android.com/apk/res/Snake.Android"
+                style="@style/StretchedView">
+  
+  <LinearLayout
+      android:id="@+id/StartGameContent"
+      style="@style/StretchedView"
+      android:orientation="vertical"
+      android:background="@color/Green">
+
+    <snake.android.widgets.TypefaceTextView
+        style="@style/NoHeightWrappedView"
+        android:layout_weight="1.0"
+        android:text="@string/HighScores"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/Text44"
+        android:gravity="center"
+        android:layout_gravity="center"
+        font:fontPath="Fonts/nokiafc22.ttf"/>
+
+    <LinearLayout
+      style="@style/NoHeightStretchedHorizontallyView"
+      android:layout_weight="0.5">
+
+      <snake.android.widgets.TypefaceTextView
+        style="@style/PointsLabelView"
+        android:text="@string/easy"
+        font:fontPath="Fonts/nokiafc22.ttf"/>
+
+      <snake.android.widgets.TypefaceTextView
+        style="@style/PointsLabelView"
+        android:text="@string/medium"
+        font:fontPath="Fonts/nokiafc22.ttf"/>
+
+      <snake.android.widgets.TypefaceTextView
+        style="@style/PointsLabelView"
+        android:text="@string/high"
+        font:fontPath="Fonts/nokiafc22.ttf"/>
+    </LinearLayout>
+
+    <LinearLayout
+      style="@style/NoHeightStretchedHorizontallyView"
+      android:layout_weight="0.5">
+
+      <snake.android.widgets.TypefaceTextView
+        style="@style/PointsView"
+        local:MvxBind="Text EasyMaxScore"
+        font:fontPath="Fonts/nokiafc22.ttf"/>
+
+      <snake.android.widgets.TypefaceTextView
+        style="@style/PointsView"
+        local:MvxBind="Text MediumMaxScore"
+        font:fontPath="Fonts/nokiafc22.ttf"/>
+
+      <snake.android.widgets.TypefaceTextView
+        style="@style/PointsView"
+        local:MvxBind="Text HardMaxScore"
+        font:fontPath="Fonts/nokiafc22.ttf"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+      style="@style/NoHeightStretchedHorizontallyView"
+      android:layout_weight="1.0">
+
+      <snake.android.widgets.TypefaceButton
+        style="@style/WrappedView"        
+        android:background="@color/Black"
+        android:textColor="@color/Green"
+        android:text="@string/NewGame"
+        android:textSize="@dimen/Text46"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/NewGameButtonHorizontalPadding"
+        android:paddingRight="@dimen/NewGameButtonHorizontalPadding"
+        android:paddingTop="@dimen/NewGameButtonVerticalPadding"
+        android:paddingBottom="@dimen/NewGameButtonVerticalPadding"        
+        font:fontPath="Fonts/nokiafc22.ttf"
+        local:MvxBind="Click StartTouchCommand"/>
+
+    </FrameLayout>
+
+  </LinearLayout>
+
+  <FrameLayout    
+    style="@style/WrappedView"    
+    android:background="@color/Green"
+    android:layout_gravity="center"    
+    android:layout_centerInParent="true"
+    local:MvxBind="Visibility BooleanToHide(SelectLevelHidden)">
+    
+    <ImageView
+      style="@style/WrappedView"
+      android:background="@color/Black"
+      android:src="@drawable/design_popup"/> 
+
+    <LinearLayout
+      style="@style/StretchedView"      
+      android:orientation="vertical"
+      android:layout_gravity="center"
+      android:layout_centerInParent="true">
+
+      <snake.android.widgets.TypeFaceTextView
+          style="@style/StartGamePopUpItem"
+          android:text="@string/Easy"
+          font:fontPath="Fonts/VCR_OSD_MONO.ttf"
+          local:MvxBind="Click EasyChoicedCommand"/>  
+
+      <snake.android.widgets.TypeFaceTextView
+          style="@style/StartGamePopUpItem"
+          android:text="@string/Medium"
+          font:fontPath="Fonts/VCR_OSD_MONO.ttf"
+          local:MvxBind="Click MediumChoicedCommand"/>
+
+      <snake.android.widgets.TypeFaceTextView
+          style="@style/StartGamePopUpItem"
+          android:text="@string/Hard"
+          font:fontPath="Fonts/VCR_OSD_MONO.ttf"
+          local:MvxBind="Click HardChoicedCommand"/>
+
+    </LinearLayout>
+
+    <ImageButton
+      style="@style/WrappedView"
+      android:src="@drawable/design_close_popup"
+      android:background="@null"
+      android:layout_alignParentRight="true"
+      android:layout_gravity="right"
+      local:MvxBind="Click CloseCommand"/>
+  
+  </FrameLayout>
+
+</FrameLayout>

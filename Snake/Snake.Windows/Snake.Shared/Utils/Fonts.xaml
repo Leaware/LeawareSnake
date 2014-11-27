@@ -1,0 +1,8 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Snake">
+    
+    <FontFamily x:Key="Nokia">/Fonts/nokiafc22.ttf#Nokia Cellphone FC Small</FontFamily>
+    <FontFamily x:Key="Mono">/Fonts/VCR_OSD_MONO.ttf#VCR OSD Mono</FontFamily>
+</ResourceDictionary>
